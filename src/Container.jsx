@@ -13,6 +13,7 @@ class Container extends Component {
     super(props);
     this.state = {
       inputwords: data,
+      selecteds: "price",
     };
   }
   render() {
@@ -26,6 +27,7 @@ class Container extends Component {
       );
       this.setState({ inputwords: res });
     };
+console.log(this.state.selecteds);
     return (
       <div>
         <Wrap>
@@ -35,22 +37,28 @@ class Container extends Component {
             type="number"
           />
           <Inputs onChange={OnPriceFilter} placeholder="Searching Name 🔍" />
-          <Selected name="" id="">
-            <option value="">sale</option>
-            <option value="">price</option>
+          <Selected
+            onChange={(e) => this.setState({ selecteds: e.target.value })}
+            name=""
+            id=""
+          >
+            <option value="price">price</option>
+            <option value="sale">sale</option>
           </Selected>
         </Wrap>
         <Containers>
-          {this.state.inputwords.map((value, index) => (
-            <Wrapper>
-              <Image src={value.Img} alt="" />
-              <div>
-                <h3>{value.price}</h3>
-                <del>{value.sale}</del>
-              </div>
-              <h1>{value.name}</h1>
-            </Wrapper>
-          ))}
+          {this.state.inputwords
+            .filter((item) => this.state.selecteds in item)
+            .map((value, index) => (
+              <Wrapper>
+                <Image src={value.Img} alt="" />
+                <div>
+                  <h3>{value.price}</h3>
+                  <del>{value.sale}</del>
+                </div>
+                <h1>{value.name}</h1>
+              </Wrapper>
+            ))}
         </Containers>
       </div>
     );
