@@ -18,7 +18,7 @@ export const data = [
         name:"Angel Wing Begonia",
         price:"150$",
         Img :images2,
-        sale:"34$",
+        sale:"340$",
 
     },    {
         id: 3,
@@ -27,15 +27,16 @@ export const data = [
         Img:images3
     },    {
         id: 4,
-        price:"330$",
+        sale:"330$",
+        price:"210$",
         name:"Beach Spider Lily ",
         Img:images4
     },    {
         id: 5,
         name:"Blushing Bromeliad",
-        price:"130$",
+        price:"50$",
         Img:images5,
-        sale: "50 $",
+        sale: "130 $",
 
 
     },    {
@@ -45,19 +46,21 @@ export const data = [
         Img:images6
     },    {
         id: 7,
-        price:"400$",
+        sale: "100$",
+        price:"201$",
         name:"Bird's Nest Fern",
         Img:images7
     },    {
         id: 8,
         name:"Broadleaf Lady Palm",
-        price:"100$",
+        price:"41$",
         Img : images8,
-        sale: "41 $",
+        sale: "100$",
     },
       {
         id: 9,
-        price:"320$",
+        sale: "302",
+        price:"120$",
         name:"Chinese Evergreen",
         Img : images9
     },

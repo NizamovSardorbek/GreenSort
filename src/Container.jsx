@@ -27,7 +27,7 @@ class Container extends Component {
       );
       this.setState({ inputwords: res });
     };
-console.log(this.state.selecteds);
+    console.log(this.state.selecteds);
     return (
       <div>
         <Wrap>
