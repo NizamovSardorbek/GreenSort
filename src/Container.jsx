@@ -42,7 +42,7 @@ class Container extends Component {
             name=""
             id=""
           >
-            <option value="price">pricee</option>
+            <option value="price">price</option>
             <option value="sale">saale</option>
           </Selected>
         </Wrap>
